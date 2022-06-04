@@ -1,0 +1,348 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs30\lang9 Question 1-a\par
+\b0 //Print odd numbers in an array\par
+\par
+//anonymous function\par
+\par
+let result = function()\{\par
+let arr = []\par
+for(i=0; i<100; i++)\{\par
+\tab let number = arr.push(i)\par
+\}\par
+let odds = arr.filter(n => n%2)\par
+\par
+console.log(odds);\par
+\}\par
+result();\par
+\par
+// IIFE function\par
+\par
+(() => \{\par
+\tab let arr = []\par
+for(i=0; i<100; i++)\{\par
+\tab let number = arr.push(i)\par
+\}\par
+let odds = arr.filter(n => n%2)\par
+\par
+console.log(odds);\par
+\})();\par
+********************************************************\par
+\b Question b:\par
+\b0 var array=["satya","sasi","raju"];\par
+\par
+let titleCaps = function()\{\par
+    for(i=-0;i<array.length;i++)\{\par
+        var y=array[i].split("")\par
+        if(y[0].charCodeAt()>=y[0].charCodeAt())\{\par
+            y[0]=String.fromCharCode(y[0].charCodeAt(0)-32)\par
+            \par
+            \}\par
+            array[i]=y[0]+array[i].substring(1,y.length)\par
+    \}\par
+console.log(array);\par
+\} \par
+titleCaps(array);\par
+\par
+\par
+// IIFE function\par
+\par
+(() => \{\par
+  for(i=-0;i<array.length;i++)\{\par
+        var y=array[i].split("")\par
+        if(y[0].charCodeAt()>=y[0].charCodeAt())\{\par
+            y[0]=String.fromCharCode(y[0].charCodeAt(0)-32)\par
+            \par
+            \}\par
+            array[i]=y[0]+array[i].substring(1,y.length)\par
+    \}\par
+console.log(array);\par
+\})();\par
+\b *********************************************************\par
+Question 3:\par
+\b0 let arr = [95, 65, 88, 25, 87, 26, 68];\par
+\par
+let sum = arr.reduce((acc, cur) => \{\par
+  return acc + cur;\par
+\par
+\})\par
+console.log(sum)\par
+\b *********************************************************\par
+Question c:\par
+\b0 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]; \par
+\par
+function isPrime(num) \{\par
+  for (let start = 2; num > start; start++) \{\par
+    if (num % start === 0) \{\par
+      return false;\par
+    \}\par
+  \}\par
+  return num;\par
+\}\par
+\par
+ console.log(array.filter(isPrime)); \par
+\b *********************************************************\par
+Question d:\par
+\b0 var ar1 = [1, 15, 15, 6, 8];\par
+var ar2 = [2, 15, 17, 55, 36];\par
+var n1 = ar1.length;\par
+var n2 = ar2.length;\par
+var n=n1;\par
+\par
+let median = function()\{\par
+    var i = 0; \par
+    var j = 0; \par
+    var count;\par
+    var m1 = -1, m2 = -1;\par
+    for (count = 0; count <= n; count++)\par
+    \{       \par
+        if (i == n)\par
+        \{\par
+            m1 = m2;\par
+            m2 = ar2[0];\par
+            break;\par
+        \}\par
+        else if (j == n)\par
+        \{\par
+            m1 = m2;\par
+            m2 = ar1[0];\par
+            break;\par
+        \}\par
+   \par
+        if (ar1[i] <= ar2[j])\par
+        \{\par
+            m1 = m2; \par
+            m2 = ar1[i];\par
+            i++;\par
+        \}\par
+        else\par
+        \{\par
+            m1 = m2; \par
+            m2 = ar2[j];\par
+            j++;\par
+        \}\par
+    \}\par
+\par
+\par
+    console.log((m1 + m2)/2)\par
+\}\par
+\par
+median();\par
+\par
+\par
+//IIFE\par
+\par
+// (function()\{\par
+//     var i = 0; \par
+//     var j = 0; \par
+//     var count;\par
+//     var m1 = -1, m2 = -1;\par
+//     for (count = 0; count <= n; count++)\par
+//     \{       \par
+//         if (i == n)\par
+//         \{\par
+//             m1 = m2;\par
+//             m2 = ar2[0];\par
+//             break;\par
+//         \}\par
+//         else if (j == n)\par
+//         \{\par
+//             m1 = m2;\par
+//             m2 = ar1[0];\par
+//             break;\par
+//         \}\par
+   \par
+//         if (ar1[i] <= ar2[j])\par
+//         \{\par
+//             m1 = m2; \par
+//             m2 = ar1[i];\par
+//             i++;\par
+//         \}\par
+//         else\par
+//         \{\par
+//             m1 = m2; \par
+//             m2 = ar2[j];\par
+//             j++;\par
+//         \}\par
+//     \}\par
+\par
+\par
+//     console.log((m1 + m2)/2)\par
+// \})(ar1,ar2,n1)\par
+\b *********************************************************\par
+Question f:\par
+\b0 var ar1 = [1, 15, 15, 6, 8];\par
+var ar2 = [2, 15, 17, 55, 36];\par
+var n1 = ar1.length;\par
+var n2 = ar2.length;\par
+var n=n1;\par
+\par
+let median = function()\{\par
+    var i = 0; \par
+    var j = 0; \par
+    var count;\par
+    var m1 = -1, m2 = -1;\par
+    for (count = 0; count <= n; count++)\par
+    \{       \par
+        if (i == n)\par
+        \{\par
+            m1 = m2;\par
+            m2 = ar2[0];\par
+            break;\par
+        \}\par
+        else if (j == n)\par
+        \{\par
+            m1 = m2;\par
+            m2 = ar1[0];\par
+            break;\par
+        \}\par
+   \par
+        if (ar1[i] <= ar2[j])\par
+        \{\par
+            m1 = m2; \par
+            m2 = ar1[i];\par
+            i++;\par
+        \}\par
+        else\par
+        \{\par
+            m1 = m2; \par
+            m2 = ar2[j];\par
+            j++;\par
+        \}\par
+    \}\par
+\par
+\par
+    console.log((m1 + m2)/2)\par
+\}\par
+\par
+median();\par
+\par
+\par
+//IIFE\par
+\par
+// (function()\{\par
+//     var i = 0; \par
+//     var j = 0; \par
+//     var count;\par
+//     var m1 = -1, m2 = -1;\par
+//     for (count = 0; count <= n; count++)\par
+//     \{       \par
+//         if (i == n)\par
+//         \{\par
+//             m1 = m2;\par
+//             m2 = ar2[0];\par
+//             break;\par
+//         \}\par
+//         else if (j == n)\par
+//         \{\par
+//             m1 = m2;\par
+//             m2 = ar1[0];\par
+//             break;\par
+//         \}\par
+   \par
+//         if (ar1[i] <= ar2[j])\par
+//         \{\par
+//             m1 = m2; \par
+//             m2 = ar1[i];\par
+//             i++;\par
+//         \}\par
+//         else\par
+//         \{\par
+//             m1 = m2; \par
+//             m2 = ar2[j];\par
+//             j++;\par
+//         \}\par
+//     \}\par
+\par
+\par
+//     console.log((m1 + m2)/2)\par
+// \})(ar1,ar2,n1)\par
+\b *********************************************************\par
+Question g:\par
+\b0 var arr=[1,2,3,1,7,2,7,2,1,1,9,4,5,8];\par
+\par
+let result = function()\{\par
+    var res=[];\par
+for(i=0;i<arr.length;i++)\{\par
+    var repeat=0;\par
+    for(j=0;j<arr.length;j++)\{\par
+        if(arr[i]==res[j])\{\par
+            repeat=1;\par
+        \}\par
+    \}\par
+    if(repeat==0)\{\par
+        res.push(arr[i])\par
+    \}\par
+\par
+\par
+\}\par
+console.log(res)\par
+\}\par
+\par
+result();\par
+\par
+\par
+\par
+//IIFE\par
+\par
+(() =>\{\par
+var result=[];\par
+for(i=0;i<arr.length;i++)\{\par
+    var repeat=0;\par
+    for(j=0;j<arr.length;j++)\{\par
+        if(arr[i]==result[j])\{\par
+            repeat=1;\par
+        \}\par
+    \}\par
+    if(repeat==0)\{\par
+        result.push(arr[i])\par
+    \}\par
+\par
+\par
+\}\par
+console.log(result)\par
+\})(arr)\par
+\b *********************************************************\par
+Question h:\par
+\b0 var arr=[1,2,3,4,6];\par
+\par
+var k=2;\par
+\par
+let result = function()\{\par
+    var res=[];\par
+    var n=arr.length;\par
+    k=k%n;\par
+    for(i=0;i<arr.length;i++)\{\par
+        if(i<k)\{\par
+        res[i]=arr[n-k+i]\par
+        \}\par
+        else\{\par
+            res[i]=arr[i-k]\par
+        \}\par
+    \}\par
+    console.log(res)\par
+\par
+\}\par
+    result(arr);\par
+\par
+//IIFE\par
+\par
+(() =>\{\par
+    \par
+    var res=[];\par
+    var n=arr.length;\par
+    k=k%n;\par
+    for(i=0;i<arr.length;i++)\{\par
+        if(i<k)\{\par
+        res[i]=arr[n-k+i]\par
+        \}\par
+        else\{\par
+            res[i]=arr[i-k]\par
+        \}\par
+    \}\par
+    console.log(res)\par
+\par
+\par
+\})(arr,k)\fs22\par
+}
+ 
